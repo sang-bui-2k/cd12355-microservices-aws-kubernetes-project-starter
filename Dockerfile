@@ -4,11 +4,9 @@ RUN apt-get update
 
 WORKDIR /app
 
-COPY requirements.txt .
+COPY analytics .
 
 RUN pip install --no-cache-dir -r requirements.txt
-
-COPY analytics .
 
 EXPOSE 5153
 

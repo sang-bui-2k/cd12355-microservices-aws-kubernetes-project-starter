@@ -10,7 +10,7 @@ phases:
     commands:
     # Build Docker image
     - echo Building Docker image...
-    - docker build --pull --rm -f "analytics\Dockerfile" -t coworking:$CODEBUILD_BUILD_NUMBER "analytics"
+    - docker build -t coworking:$CODEBUILD_BUILD_NUMBER .
     # Tag Docker image
     - echo Tagging Docker image...
     - docker tag coworking:latest 312359166181.dkr.ecr.us-east-1.amazonaws.com/coworking:$CODEBUILD_BUILD_NUMBER
