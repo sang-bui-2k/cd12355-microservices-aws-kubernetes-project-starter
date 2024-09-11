@@ -13,7 +13,7 @@ phases:
     - docker build -t coworking:$CODEBUILD_BUILD_NUMBER .
     # Tag Docker image
     - echo Tagging Docker image...
-    - docker tag coworking:latest 312359166181.dkr.ecr.us-east-1.amazonaws.com/coworking:$CODEBUILD_BUILD_NUMBER
+    - docker tag coworking:$CODEBUILD_BUILD_NUMBER 312359166181.dkr.ecr.us-east-1.amazonaws.com/coworking:$CODEBUILD_BUILD_NUMBER
   post_build:
     commands:
     # Push Docker image to Amazon ECR
