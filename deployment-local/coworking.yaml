@@ -33,6 +33,13 @@ spec:
       - name: coworking
         # Locally hosted docker image
         image: <DOCKER_IMAGE_NAME>:<IMAGE_TAG>
+        resources:
+          limits:
+            memory: 256Mi
+            cpu: "1"
+          requests:
+            memory: 128Mi
+            cpu: "0.2"
         imagePullPolicy: IfNotPresent
         livenessProbe:
           httpGet:

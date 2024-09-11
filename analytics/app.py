@@ -1,3 +1,6 @@
+# This code is reused from an Udacity project. 
+# Original code can be found at: https://github.com/udacity/cd12355-microservices-aws-kubernetes-project-starter
+
 import logging
 import os
 
